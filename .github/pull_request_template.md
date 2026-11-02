@@ -1,6 +1,5 @@
 Closes #
 
-- [ ] Entry added to `.claude-plugin/marketplace.json`, pointing at the author's repo (no copied code)
+- [ ] Entry added to `.claude-plugin/marketplace.json`, pointing at the author's repo or at `./plugins/<name>`
 - [ ] README table/list updated
-- [ ] `claude plugin validate .` passes
-- [ ] Installed it once with `claude plugin install <name>@ai-bible`
+- [ ] Every gate in `AGENTS.md` passes

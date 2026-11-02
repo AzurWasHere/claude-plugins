@@ -1,0 +1,11 @@
+{
+  "name": "orchestrator",
+  "version": "0.1.0",
+  "description": "Opus orchestrator that works GitHub issues end to end: routes work to Haiku, Sonnet, Opus and Fable agents, runs repo gates, reviews against acceptance criteria, opens one PR per issue.",
+  "author": {
+    "name": "AzurWasHere",
+    "url": "https://github.com/AzurWasHere"
+  },
+  "homepage": "https://github.com/AzurWasHere/claude-plugins/tree/main/plugins/orchestrator",
+  "keywords": ["orchestration", "subagents", "model-routing", "gates", "github-issues"]
+}

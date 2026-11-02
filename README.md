@@ -31,6 +31,29 @@ Or inside Claude Code: `/plugin` → browse the `ai-bible` marketplace.
 | Plugin | What it does | Source |
 |---|---|---|
 | `mattpocock-skills` | Skills for real engineers: grilling, TDD, code review, domain modelling, prototyping. | [mattpocock/skills](https://github.com/mattpocock/skills) |
+| `orchestrator` | Opus orchestrator that works GitHub issues end to end across Haiku, Sonnet, Opus and Fable agents. | [this repo](plugins/orchestrator) |
+
+#### orchestrator
+
+Requires `mattpocock-skills` (for grilling) and the `gh` CLI.
+
+| Agent | Model | Job |
+|---|---|---|
+| `orchestrator` | Opus | Plans, reads criteria from the issue, delegates, never edits |
+| `builder` | Opus | Complex code and all UI functionality |
+| `stylist` | Fable | Visual polish only; hands behaviour changes back |
+| `executor` | Sonnet | Up to 10 files following an existing pattern |
+| `researcher` | Sonnet | Read-only investigation |
+| `reviewer` | Sonnet | PASS/FAIL per acceptance criterion |
+| `chore` | Haiku | CLI, `gh`/`git`, gates, issues, branches, PRs |
+
+1. `/orchestrator:init` once per repo: writes `AGENTS.md`, or adds its `## Gates` section, and opens a PR.
+2. `/orchestrator 12 15 18`: issues with an `## Acceptance criteria` checklist start at once, each as a background agent in its own worktree. Issues without one, or `/orchestrator` with no numbers, get grilled first and filed as issues.
+3. Each issue runs: build → polish (UI only) → every gate → review → one PR (`Closes #<n>`). One failure escalates the fix a tier: Haiku → Sonnet → Opus → you.
+
+Questions from a background agent come to you in the main session; your answer goes back to that agent. You merge; agents never push to the default branch.
+
+For a whole session as the orchestrator: `claude --agent orchestrator:orchestrator`.
 
 ### Security (Trail of Bits suite)
 
@@ -51,8 +74,9 @@ See [`.claude-plugin/marketplace.json`](.claude-plugin/marketplace.json) for the
 
 ## How this works
 
-This repo vendors nothing. Each entry points at the author's own repository,
+Third-party plugins are not copied here. Each entry points at the author's own repository,
 so you always get their latest version and their license applies.
+Plugins authored here live in [`plugins/`](plugins).
 
 ## Adding a plugin
 
@@ -60,7 +84,7 @@ All changes go through issues and pull requests; `main` is protected.
 
 1. [Open an issue](../../issues/new?template=add-plugin.yml) suggesting the plugin.
 2. Open a PR that adds its entry to `.claude-plugin/marketplace.json` and the README, and links the issue.
-3. CI runs `claude plugin validate .`; it must pass before merging. Run it locally first:
+3. The branch must pass every gate in [`AGENTS.md`](AGENTS.md). CI runs `claude plugin validate .`; run it locally first:
 
 ```bash
 claude plugin validate .

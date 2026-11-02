@@ -1,0 +1,680 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "ai-bible",
+  "owner": {
+    "name": "AzurWasHere",
+    "url": "https://github.com/AzurWasHere"
+  },
+  "description": "A curated bible of Claude Code plugins and skills for using AI more effectively.",
+  "plugins": [
+    {
+      "name": "ponytail",
+      "description": "Lazy senior dev mode: the smallest change that fully solves the task. YAGNI, stdlib first.",
+      "source": {
+        "source": "github",
+        "repo": "DietrichGebert/ponytail"
+      },
+      "category": "productivity"
+    },
+    {
+      "name": "caveman",
+      "description": "Talk like caveman. Cut filler, keep technical details. Saves output tokens.",
+      "source": {
+        "source": "github",
+        "repo": "JuliusBrussee/caveman"
+      },
+      "category": "productivity"
+    },
+    {
+      "name": "mattpocock-skills",
+      "description": "Matt Pocock's skills for real engineers: grilling, TDD, code review, domain modelling, prototyping and more.",
+      "source": {
+        "source": "github",
+        "repo": "mattpocock/skills"
+      },
+      "category": "engineering"
+    },
+    {
+      "name": "audit-context-building",
+      "description": "Understand a codebase before looking for bugs in it. Reads it function by function, records what each one assumes and depends on, and saves the write-ups to files instead of filling up the conversation.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/trailofbits/skills.git",
+        "path": "plugins/audit-context-building"
+      },
+      "category": "security",
+      "author": {
+        "name": "Omar Inuwa"
+      }
+    },
+    {
+      "name": "building-secure-contracts",
+      "description": "Comprehensive smart contract security toolkit based on Trail of Bits' Building Secure Contracts framework. Includes vulnerability scanners for 6 blockchains and 5 development guideline assistants.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/trailofbits/skills.git",
+        "path": "plugins/building-secure-contracts"
+      },
+      "category": "security",
+      "author": {
+        "name": "Omar Inuwa && Paweł Płatek"
+      }
+    },
+    {
+      "name": "burpsuite-project-parser",
+      "description": "Search and extract data from Burp Suite project files (.burp) for security analysis",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/trailofbits/skills.git",
+        "path": "plugins/burpsuite-project-parser"
+      },
+      "category": "security",
+      "author": {
+        "name": "Will Vandevanter"
+      }
+    },
+    {
+      "name": "chrome-mcp-troubleshooting",
+      "description": "Diagnose and fix Claude in Chrome MCP extension connectivity issues",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/trailofbits/skills.git",
+        "path": "plugins/chrome-mcp-troubleshooting"
+      },
+      "category": "security",
+      "author": {
+        "name": "Dan Guido"
+      }
+    },
+    {
+      "name": "constant-time-analysis",
+      "description": "Detect compiler-induced timing side-channels in cryptographic code",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/trailofbits/skills.git",
+        "path": "plugins/constant-time-analysis"
+      },
+      "category": "security",
+      "author": {
+        "name": "Scott Arciszewski",
+        "email": "opensource@trailofbits.com"
+      }
+    },
+    {
+      "name": "culture-index",
+      "description": "Interprets Culture Index survey results for individuals and teams",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/trailofbits/skills.git",
+        "path": "plugins/culture-index"
+      },
+      "category": "security",
+      "author": {
+        "name": "Dan Guido"
+      }
+    },
+    {
+      "name": "devcontainer-setup",
+      "description": "Create pre-configured devcontainers with Claude Code and language-specific tooling",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/trailofbits/skills.git",
+        "path": "plugins/devcontainer-setup"
+      },
+      "category": "security",
+      "author": {
+        "name": "Alexis Challande",
+        "url": "https://github.com/trailofbits"
+      }
+    },
+    {
+      "name": "differential-review",
+      "description": "Security-focused differential review of code changes with git history analysis and blast radius estimation",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/trailofbits/skills.git",
+        "path": "plugins/differential-review"
+      },
+      "category": "security",
+      "author": {
+        "name": "Omar Inuwa"
+      }
+    },
+    {
+      "name": "firebase-apk-scanner",
+      "description": "Scan Android APKs for Firebase security misconfigurations including open databases, storage buckets, authentication issues, and exposed cloud functions. For authorized security research only.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/trailofbits/skills.git",
+        "path": "plugins/firebase-apk-scanner"
+      },
+      "category": "security",
+      "author": {
+        "name": "Nick Sellier"
+      }
+    },
+    {
+      "name": "gh-cli",
+      "description": "Intercepts GitHub URL fetches (WebFetch and MCP fetch tools) and curl/wget commands, redirecting to the authenticated gh CLI.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/trailofbits/skills.git",
+        "path": "plugins/gh-cli"
+      },
+      "category": "security",
+      "author": {
+        "name": "William Tan",
+        "email": "opensource@trailofbits.com",
+        "url": "https://github.com/trailofbits"
+      }
+    },
+    {
+      "name": "dwarf-expert",
+      "description": "Analyze DWARF debug information: parse and search DIEs with dwarfdump and readelf, verify debug info integrity, and write DWARF parsing code",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/trailofbits/skills.git",
+        "path": "plugins/dwarf-expert"
+      },
+      "category": "security",
+      "author": {
+        "name": "Evan Hellman",
+        "email": "opensource@trailofbits.com"
+      }
+    },
+    {
+      "name": "entry-point-analyzer",
+      "description": "Analyzes smart contract codebases to identify state-changing entry points for security auditing. Detects externally callable functions that modify state, categorizes them by access level, and generates structured audit reports.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/trailofbits/skills.git",
+        "path": "plugins/entry-point-analyzer"
+      },
+      "category": "security",
+      "author": {
+        "name": "Nicolas Donboly",
+        "email": "opensource@trailofbits.com",
+        "url": "https://github.com/trailofbits"
+      }
+    },
+    {
+      "name": "mutation-testing",
+      "description": "Configures mewt or muton campaigns, analyzes surviving mutants, and investigates bugs exposed by testing gaps. Use when setting up mutation testing, reviewing campaign results, identifying equivalent mutants, or finding bugs from surviving mutations.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/trailofbits/skills.git",
+        "path": "plugins/mutation-testing"
+      },
+      "category": "security",
+      "author": {
+        "name": "Trail of Bits",
+        "email": "opensource@trailofbits.com",
+        "url": "https://github.com/trailofbits"
+      }
+    },
+    {
+      "name": "patching-bugs",
+      "description": "Agent-orchestrated workflow to reproduce, patch, prove and regression-check one known bug.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/trailofbits/skills.git",
+        "path": "plugins/patching-bugs"
+      },
+      "category": "security",
+      "author": {
+        "name": "Trail of Bits",
+        "url": "https://github.com/trailofbits"
+      }
+    },
+    {
+      "name": "post-patch-validation",
+      "description": "Validates security patches against the reported bug, root-cause variants, and surrounding behavior. Returns reproducible failures to repair and validation gaps, with pinned inputs and saved evidence. Bundles a validate-patch dynamic workflow for Claude Code.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/trailofbits/skills.git",
+        "path": "plugins/post-patch-validation"
+      },
+      "category": "security",
+      "author": {
+        "name": "Scott Arciszewski",
+        "email": "opensource@trailofbits.com",
+        "url": "https://github.com/tob-scott-a"
+      }
+    },
+    {
+      "name": "property-based-testing",
+      "description": "Write, review, and triage property-based tests — Hypothesis, fast-check, proptest, and Echidna or Medusa for Solidity invariants",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/trailofbits/skills.git",
+        "path": "plugins/property-based-testing"
+      },
+      "category": "security",
+      "author": {
+        "name": "Henrik Brodin",
+        "email": "opensource@trailofbits.com"
+      }
+    },
+    {
+      "name": "regression-hunt",
+      "description": "Agent-orchestrated skills for finding, reproducing and adjudicating regressions in PRs or commits.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/trailofbits/skills.git",
+        "path": "plugins/regression-hunt"
+      },
+      "category": "security",
+      "author": {
+        "name": "Trail of Bits",
+        "url": "https://github.com/trailofbits"
+      }
+    },
+    {
+      "name": "semgrep-rule-creator",
+      "description": "Create custom Semgrep rules for detecting bug patterns and security vulnerabilities",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/trailofbits/skills.git",
+        "path": "plugins/semgrep-rule-creator"
+      },
+      "category": "security",
+      "author": {
+        "name": "Maciej Domanski"
+      }
+    },
+    {
+      "name": "semgrep-rule-variant-creator",
+      "description": "Creates language variants of existing Semgrep rules with proper applicability analysis and test-driven validation",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/trailofbits/skills.git",
+        "path": "plugins/semgrep-rule-variant-creator"
+      },
+      "category": "security",
+      "author": {
+        "name": "Maciej Domanski",
+        "email": "opensource@trailofbits.com"
+      }
+    },
+    {
+      "name": "sharp-edges",
+      "description": "Identify error-prone APIs, dangerous configurations, and footgun designs that enable security mistakes",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/trailofbits/skills.git",
+        "path": "plugins/sharp-edges"
+      },
+      "category": "security",
+      "author": {
+        "name": "Scott Arciszewski",
+        "email": "opensource@trailofbits.com",
+        "url": "https://github.com/trailofbits"
+      }
+    },
+    {
+      "name": "static-analysis",
+      "description": "Static analysis toolkit with CodeQL, Semgrep, and SARIF parsing for security vulnerability detection",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/trailofbits/skills.git",
+        "path": "plugins/static-analysis"
+      },
+      "category": "security",
+      "author": {
+        "name": "Axel Mierczuk & Paweł Płatek"
+      }
+    },
+    {
+      "name": "spec-to-code-compliance",
+      "description": "Check code against the documentation that specifies it: one agent per requirement, divergences refuted before they are reported, evidence cited to the line",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/trailofbits/skills.git",
+        "path": "plugins/spec-to-code-compliance"
+      },
+      "category": "security",
+      "author": {
+        "name": "Omar Inuwa"
+      }
+    },
+    {
+      "name": "testing-handbook-skills",
+      "description": "Skills from the Trail of Bits Application Security Testing Handbook (appsec.guide)",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/trailofbits/skills.git",
+        "path": "plugins/testing-handbook-skills"
+      },
+      "category": "security",
+      "author": {
+        "name": "Paweł Płatek"
+      }
+    },
+    {
+      "name": "trailmark",
+      "description": "Builds source and binary code graphs for security analysis, context slicing, mutation testing, cryptographic protocol modeling, finding triage, and variant analysis.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/trailofbits/skills.git",
+        "path": "plugins/trailmark"
+      },
+      "category": "security",
+      "author": {
+        "name": "Scott Arciszewski",
+        "url": "https://github.com/tob-scott-a"
+      }
+    },
+    {
+      "name": "variant-analysis",
+      "description": "Find similar vulnerabilities and bugs across codebases using pattern-based analysis",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/trailofbits/skills.git",
+        "path": "plugins/variant-analysis"
+      },
+      "category": "security",
+      "author": {
+        "name": "Axel Mierczuk"
+      }
+    },
+    {
+      "name": "c-review",
+      "description": "Comprehensive C/C++ security code review, with coverage verified against a parse of the source",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/trailofbits/skills.git",
+        "path": "plugins/c-review"
+      },
+      "category": "security",
+      "author": {
+        "name": "Paweł Płatek"
+      }
+    },
+    {
+      "name": "rust-review",
+      "description": "Comprehensive Rust security code review with specialized bug-finding agents covering the safe/unsafe boundary, memory safety in unsafe blocks, concurrency, panic-induced DoS, recursion-induced stack overflow, FFI, and async runtime hazards",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/trailofbits/skills.git",
+        "path": "plugins/rust-review"
+      },
+      "category": "security",
+      "author": {
+        "name": "Andrea Cappa (Aptos Labs) & Paweł Płatek (Trail of Bits)"
+      }
+    },
+    {
+      "name": "modern-python",
+      "description": "Modern Python best practices. Use when creating new Python projects, and writing Python scripts, or migrating existing projects from legacy tools.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/trailofbits/skills.git",
+        "path": "plugins/modern-python"
+      },
+      "category": "security",
+      "author": {
+        "name": "William Tan",
+        "email": "opensource@trailofbits.com",
+        "url": "https://github.com/trailofbits"
+      }
+    },
+    {
+      "name": "insecure-defaults",
+      "description": "Detects insecure default configurations including hardcoded credentials, fallback secrets, weak authentication defaults, and dangerous values in production",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/trailofbits/skills.git",
+        "path": "plugins/insecure-defaults"
+      },
+      "category": "security",
+      "author": {
+        "name": "Trail of Bits",
+        "email": "opensource@trailofbits.com",
+        "url": "https://github.com/trailofbits"
+      }
+    },
+    {
+      "name": "review-walkthrough",
+      "description": "Generates an interactive HTML walkthrough for reviewing code changes. Use only when explicitly called.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/trailofbits/skills.git",
+        "path": "plugins/review-walkthrough"
+      },
+      "category": "security",
+      "author": {
+        "name": "Facundo Tuesca",
+        "email": "opensource@trailofbits.com",
+        "url": "https://github.com/trailofbits"
+      }
+    },
+    {
+      "name": "second-opinion",
+      "description": "Gets independent code reviews from Codex or Antigravity for uncommitted changes, branch diffs, and commits.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/trailofbits/skills.git",
+        "path": "plugins/second-opinion"
+      },
+      "category": "security",
+      "author": {
+        "name": "Dan Guido"
+      }
+    },
+    {
+      "name": "yara-authoring",
+      "description": "YARA-X detection rule authoring with linting and quality analysis",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/trailofbits/skills.git",
+        "path": "plugins/yara-authoring"
+      },
+      "category": "security",
+      "author": {
+        "name": "Trail of Bits",
+        "email": "opensource@trailofbits.com",
+        "url": "https://github.com/trailofbits"
+      }
+    },
+    {
+      "name": "git-cleanup",
+      "description": "Safely analyzes and cleans up local git branches and worktrees by categorizing them as merged, squash-merged, superseded, or active work.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/trailofbits/skills.git",
+        "path": "plugins/git-cleanup"
+      },
+      "category": "security",
+      "author": {
+        "name": "Henrik Brodin",
+        "email": "opensource@trailofbits.com",
+        "url": "https://github.com/trailofbits"
+      }
+    },
+    {
+      "name": "goal-prompt",
+      "description": "Drafts copy-ready /goal commands for goal mode in Claude Code and Codex: verifiable completion conditions with stop bounds, normalized to a single line under the 4,000-character cap.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/trailofbits/skills.git",
+        "path": "plugins/goal-prompt"
+      },
+      "category": "security",
+      "author": {
+        "name": "Paweł Płatek"
+      }
+    },
+    {
+      "name": "supply-chain-risk-auditor",
+      "description": "Audit a project's npm, PyPI, and Go dependencies for supply-chain risk: version-matched advisories for direct dependencies and the full lockfile tree, abandoned upstreams, npm publisher concentration, and install scripts",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/trailofbits/skills.git",
+        "path": "plugins/supply-chain-risk-auditor"
+      },
+      "category": "security",
+      "author": {
+        "name": "Eric Quintero"
+      }
+    },
+    {
+      "name": "zeroize-audit",
+      "description": "Detects missing or compiler-optimized zeroization of sensitive data with assembly and control-flow analysis",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/trailofbits/skills.git",
+        "path": "plugins/zeroize-audit"
+      },
+      "category": "security",
+      "author": {
+        "name": "Trail of Bits",
+        "email": "opensource@trailofbits.com",
+        "url": "https://github.com/trailofbits"
+      }
+    },
+    {
+      "name": "let-fate-decide",
+      "description": "Draws the 12 Houses of the Zodiac Tarot spread using cryptographic randomness to add 100+ bits of entropy to vague or underspecified planning. Interprets the spread to guide next steps. Use when feeling lucky, invoking heart-of-the-cards energy, or when prompts are ambiguous.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/trailofbits/skills.git",
+        "path": "plugins/let-fate-decide"
+      },
+      "category": "security",
+      "author": {
+        "name": "Scott Arciszewski",
+        "url": "https://github.com/tob-scott-a"
+      }
+    },
+    {
+      "name": "agentic-actions-auditor",
+      "description": "Audits GitHub Actions workflows for security vulnerabilities in AI agent integrations (Claude Code Action, Gemini CLI, OpenAI Codex, GitHub AI Inference)",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/trailofbits/skills.git",
+        "path": "plugins/agentic-actions-auditor"
+      },
+      "category": "security",
+      "author": {
+        "name": "Emilio López & Will Vandevanter"
+      }
+    },
+    {
+      "name": "code-improver",
+      "description": "Improves code targets — skills, plugins, or a branch's changes — through an autonomous review-and-fix workflow with a pluggable reviewer (any installed skill or agent), a cross-round findings ledger, oscillation escalation, and a mechanical scope guard.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/trailofbits/skills.git",
+        "path": "plugins/code-improver"
+      },
+      "category": "security",
+      "author": {
+        "name": "Paweł Płatek",
+        "url": "https://github.com/GrosQuildu"
+      }
+    },
+    {
+      "name": "fp-check",
+      "description": "Systematic false positive verification for security bug analysis with mandatory gate reviews",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/trailofbits/skills.git",
+        "path": "plugins/fp-check"
+      },
+      "category": "security",
+      "author": {
+        "name": "Maciej Domanski"
+      }
+    },
+    {
+      "name": "dimensional-analysis",
+      "description": "Audits code for unit and decimal-scaling bugs and annotates it with dimensional comments recording the units of each value. Use when someone asks to audit or review code for unit confusion, decimals or scaling mismatches, WAD/RAY scale errors, or the wrong token's decimals; to annotate units in a codebase; or to perform a dimensional analysis of a DeFi protocol, offchain code, or other arithmetic-heavy codebase. Catches formulas that combine values carrying different units or scales.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/trailofbits/skills.git",
+        "path": "plugins/dimensional-analysis"
+      },
+      "category": "security",
+      "author": {
+        "name": "Coriolan Pinhas & Benjamin Samuels",
+        "email": "opensource@trailofbits.com",
+        "url": "https://github.com/trailofbits"
+      }
+    },
+    {
+      "name": "vulnerability-triage-brocards",
+      "description": "Principled framework for triaging vulnerability reports using 7 brocards (rules of thumb). Evaluates incoming CVEs, bug bounty submissions, and security findings against structured dismissal/acceptance criteria before escalating to deeper analysis.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/trailofbits/skills.git",
+        "path": "plugins/vulnerability-triage-brocards"
+      },
+      "category": "security",
+      "author": {
+        "name": "Alexis Challande",
+        "email": "opensource@trailofbits.com",
+        "url": "https://github.com/trailofbits"
+      }
+    },
+    {
+      "name": "github-triage",
+      "description": "Triages a repository's open GitHub issues and pull requests via the gh CLI: optionally merges ready bot and maintainer-approved PRs and spawns review subagents for unreviewed ones, closes already-resolved issues with referenced explanations, cross-links issues with pending fix PRs, and assigns local-only priority and change-size estimates.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/trailofbits/skills.git",
+        "path": "plugins/github-triage"
+      },
+      "category": "security",
+      "author": {
+        "name": "Evan Sultanik",
+        "email": "opensource@trailofbits.com",
+        "url": "https://github.com/trailofbits"
+      }
+    },
+    {
+      "name": "open-sourcing",
+      "description": "Prepares a repository for public open-source release: secrets-history hygiene, license selection, documentation and CI readiness checks, and language-specific packaging and release guidance.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/trailofbits/skills.git",
+        "path": "plugins/open-sourcing"
+      },
+      "category": "security",
+      "author": {
+        "name": "Evan Sultanik",
+        "email": "opensource@trailofbits.com",
+        "url": "https://github.com/trailofbits"
+      }
+    },
+    {
+      "name": "writing-lean-proofs",
+      "description": "Structured Lean 4 proof writing and library design following Mathlib conventions",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/trailofbits/skills.git",
+        "path": "plugins/writing-lean-proofs"
+      },
+      "category": "security",
+      "author": {
+        "name": "Fredrik Dahlgren",
+        "email": "opensource@trailofbits.com",
+        "url": "https://github.com/trailofbits"
+      }
+    },
+    {
+      "name": "modern-cpp",
+      "description": "Modern C++ best practices (C++20/23/26). Use when writing C++ code, creating new C++ projects, or modernizing legacy C++ patterns.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/trailofbits/skills.git",
+        "path": "plugins/modern-cpp"
+      },
+      "category": "security",
+      "author": {
+        "name": "Julius Alexandre",
+        "email": "opensource@trailofbits.com",
+        "url": "https://github.com/trailofbits"
+      }
+    }
+  ]
+}

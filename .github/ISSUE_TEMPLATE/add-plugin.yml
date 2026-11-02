@@ -1,0 +1,27 @@
+name: Suggest a plugin
+description: Propose a plugin or skill to add to the marketplace
+title: "Add plugin: "
+labels: [plugin-request]
+body:
+  - type: input
+    id: repo
+    attributes:
+      label: Source repository
+      description: GitHub repo (and subfolder, if the plugin lives in one)
+      placeholder: owner/repo or owner/repo/plugins/name
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options: [productivity, engineering, security, other]
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: What it does and why it belongs here
+      description: How does it help people use AI more effectively?
+    validations:
+      required: true

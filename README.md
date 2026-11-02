@@ -56,7 +56,11 @@ so you always get their latest version and their license applies.
 
 ## Adding a plugin
 
-Add an entry to `.claude-plugin/marketplace.json`, then check it:
+All changes go through issues and pull requests; `main` is protected.
+
+1. [Open an issue](../../issues/new?template=add-plugin.yml) suggesting the plugin.
+2. Open a PR that adds its entry to `.claude-plugin/marketplace.json` and the README, and links the issue.
+3. CI runs `claude plugin validate .`; it must pass before merging. Run it locally first:
 
 ```bash
 claude plugin validate .
